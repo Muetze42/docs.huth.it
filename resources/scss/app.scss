@@ -1,0 +1,31 @@
+@tailwind base;
+
+@layer base {
+  [type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+    --tw-ring-color: theme('colors.accentLight.500');
+    border-color: theme('colors.accentLight.500');
+  }
+  .dark {
+    [type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+      --tw-ring-color: theme('colors.accentDark.500');
+      border-color: theme('colors.accentDark.500');
+    }
+  }
+  [type='text'], input:where(:not([type])), [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
+    @apply rounded;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center select-none;
+    @apply py-2 px-6 rounded-lg;
+  }
+}
+
+@tailwind utilities;
+
+@import "fonts/inter-var";
+@import "fonts/fira-code";
